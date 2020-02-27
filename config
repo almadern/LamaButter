@@ -1,0 +1,57 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+export SCRIPT_DIR="/home/almadern/Scripts"
+
+# Global properties
+separator=true
+separator_block_width=15
+
+[volume-pulseaudio]
+command=/home/almadern/Scripts/volume-pulseaudio
+interval=once
+signal=1
+#MIXER=[determined automatically]
+#SCONTROL=[determined automatically]
+##exposed format variables: ${SYMB}, ${VOL}, ${INDEX}, ${NAME}
+#LONG_FORMAT="${SYMB} ${VOL}% [${INDEX}:${NAME}]"
+#SHORT_FORMAT="${SYMB} ${VOL}% [${INDEX}]"
+#AUDIO_HIGH_SYMBOL='  '
+#AUDIO_MED_THRESH=50
+#AUDIO_MED_SYMBOL='  '
+#AUDIO_LOW_THRESH=0
+#AUDIO_LOW_SYMBOL='  '
+#AUDIO_DELTA=5
+#DEFAULT_COLOR="#ffffff"
+#MUTED_COLOR="#a0a0a0"
+#USE_ALSA_NAME=0
+#USE_DESCRIPTION=0
+## SUBSCRIBE=1 requires interval=persist and always uses LONG_FORMAT
+#SUBSCRIBE=0
+
+
+[disk]
+command=/home/almadern/Scripts/disk
+LABEL=HOME 
+#DIR=$HOME
+#ALERT_LOW=10
+interval=30
+
+
+[kbdd_layout]
+command=/home/almadern/Scripts/kbdd_layout
+interval=persist
+
+[time]
+command=/home/almadern/Scripts/time
+interval=1
+#TZ_FILE=~/.tz
+STRFTIME_FORMAT=%Y-%m-%d %H:%M:%S
+TZONES=
+TZ_LABELS=Moscow
+
+
