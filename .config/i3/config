@@ -210,7 +210,6 @@ bar {
         status_command i3blocks
 }
 
-
 #  monitor setup
 exec_always --no-startup-id xrandr --output DP-2    --primary && xrandr --output DVI-D-1 --left-of DP-2 && xrandr --output DP-1    --right-of DP-2 && xrandr --output HDMI-1  --right-of DP-1 
 
@@ -219,7 +218,6 @@ exec_always --no-startup-id xrdb ~/.config/.Xresources
 
 #Language change
 exec --no-startup-id "setxkbmap -layout us,ru -option grp:ctrl_shift_toggle" 
-
 
 #Screenshot
 bindsym $mod+F9 exec deepin-screenshot
