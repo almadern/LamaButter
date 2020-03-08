@@ -218,14 +218,16 @@ exec_always --no-startup-id xrandr --output DP-2    --primary && xrandr --output
 exec_always --no-startup-id xrdb ~/.config/.Xresources
 
 #Language change
-exec --no-startup-id "setxkbmap -layout us,ru -option grp:ctrl_shift_toggle" 
+#exec --no-startup-id "setxkbmap -layout us,ru -option grp:ctrl_shift_toggle" 
 
+#Change CapsLock to Ctrl
+#exec_always --no-startup-id "setxkbmap -layout us,ru -option ctrl:nocaps"
+
+exec_always --no-startup-id /home/almadern/Scripts/setxkbmap.sh
 
 #Screenshot
 bindsym $mod+F9 exec deepin-screenshot
 
-#Change CapsLock to Ctrl
-exec_always --no-startup-id "setxkbmap -layout us,ru -option ctrl:nocaps"
 
 #Background and opacity for terminal
 exec_always --no-startup-id feh --bg-scale ~/Desktop/Wallpaper/2.png
