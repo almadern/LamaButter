@@ -221,7 +221,7 @@ exec_always --no-startup-id xrdb ~/.config/.Xresources
 exec_always --no-startup-id /home/almadern/Scripts/setxkbmap.sh
 
 #Screenshot
-bindsym $mod+F9 exec deepin-screenshot
+bindsym Print exec --no-startup-id deepin-screenshot
 
 #polybar launch
 exec_always --no-startup-id ~/.config/polybar/launch.sh
