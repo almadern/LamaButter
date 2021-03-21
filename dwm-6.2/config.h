@@ -74,7 +74,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("st -e ranger") },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          SHCMD("firefox") },
-	{ MODKEY,                       XK_Print,  spawn,          SHCMD("deepin-screen-recorder") },
+	{ MODKEY,                       XK_Print,  spawn,          SHCMD("scrot -s") },
 
 	{ MODKEY,                       XK_F3,     spawn,          SHCMD("amixer -q -D pulse sset Master 1%+") },
 	{ MODKEY,                       XK_F2,     spawn,	   SHCMD("amixer -q -D pulse sset Master 1%-")},
