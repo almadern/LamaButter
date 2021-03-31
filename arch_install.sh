@@ -6,4 +6,4 @@ cd yay
 makepkg -si
 yay -S spotify
 yay -S xkb-switch-git
-yay -S tusk
+yay -S evernote-beta-bin
