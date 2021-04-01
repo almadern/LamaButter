@@ -78,7 +78,8 @@ static Key keys[] = {
 
 	{ MODKEY,                       XK_F3,     spawn,          SHCMD("amixer -q -D pulse sset Master 1%+") },
 	{ MODKEY,                       XK_F2,     spawn,	   SHCMD("amixer -q -D pulse sset Master 1%-")},
-	{ MODKEY,                       XK_F5,     spawn,	   SHCMD("amixer -q -D pulse sset Master toogle")},
+	{ MODKEY,                       XK_F1,     spawn,	   SHCMD("pulsemixer --toggle-mute")},
+	{ Mod4Mask,                     XK_l,      spawn,          SHCMD("slock")},
 	
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },

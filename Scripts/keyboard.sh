@@ -26,6 +26,6 @@ case $layout in
        ;;
    *r) echo "RU"
        ;;
-esac)""]_"" 
+esac)""]"" 
 }
 dwm_keyboard

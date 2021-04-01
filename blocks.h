@@ -14,7 +14,9 @@ static const Block blocks[] = {
 
 	{"", "sensors | awk '/^temp1:/{print $2}'",		                         5,	0},
 
-	{"", "/home/almadern/.config/Desktop/Scripts/calendar.sh",			                     1,	0},
+    {"", "/home/almadern/.config/Desktop/Scripts/battery",                                     15, 0,},
+
+	{"", "/home/almadern/.config/Desktop/Scripts/calendar.sh",			                     1,	0},
 
 };
 
