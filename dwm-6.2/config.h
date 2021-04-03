@@ -4,19 +4,24 @@
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int gappx              = 5;        /* gaps between windows */
-static const unsigned int gappih    = 5;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 5;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 5;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 5;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 0;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 0;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 0;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 0;       /* vert outer gap between windows and screen edge */
 static const int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10", "DejaVu-Sans-Mono:size=14" };
 static const char dmenufont[]       = "monospace:size=10";
+//background color
 static const char col_gray1[]       = "#222222";
+//inactive window border color
 static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
+//font color
+static const char col_gray3[]       = "#ffffff";
+//current tag and current window font color
 static const char col_gray4[]       = "#eeeeee";
+//top bar second color (blue) and active window border color 
 static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -79,6 +84,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F3,     spawn,          SHCMD("amixer -q -D pulse sset Master 1%+") },
 	{ MODKEY,                       XK_F2,     spawn,	   SHCMD("amixer -q -D pulse sset Master 1%-")},
 	{ MODKEY,                       XK_F1,     spawn,	   SHCMD("pulsemixer --toggle-mute")},
+	{ MODKEY,                       XK_F4,     spawn,          SHCMD("pulsemixer --toggle-mute --id source-1")},
 	{ Mod4Mask,                     XK_l,      spawn,          SHCMD("slock")},
 	
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
