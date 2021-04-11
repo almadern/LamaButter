@@ -13,10 +13,15 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10", "DejaVu-Sans-Mono:size=14" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#222222";
+//background colo
+static const char col_gray1[]       = "#000000";
+//inactive window border color
 static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
+//font color
+static const char col_gray3[]       = "#ffffff";
+//currnent tag and current window font color
 static const char col_gray4[]       = "#eeeeee";
+//top bar second color(blue) and active window border
 static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
