@@ -19,10 +19,11 @@ static const char col_gray3[]       = "#ffffff";
 static const char col_gray4[]       = "#eeeeee";
 //top bar second color(blue) and active window border
 static const char col_cyan[]        = "#005577";
+static const char col_pick[]        = "#5eeb34";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeSel]  = { col_gray4, col_cyan,  col_pick  },
 };
 
 /* tagging */
@@ -49,8 +50,8 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 
-	{ "|M|",	centeredmaster },		/* Master in middle, slaves on sides */
-	{ ">M>",	centeredfloatingmaster },	/* Same but master floats */
+	{ "|M|",      centeredmaster },		/* Master in middle, slaves on sides */
+	{ ">M>",      centeredfloatingmaster },	/* Same but master floats */
 };
 
 /* key definitions */
