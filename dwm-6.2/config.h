@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int gappx              = 5;        /* gaps between windows */
 static const int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
@@ -15,16 +15,18 @@ static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#444444";
 //font color
 static const char col_gray3[]       = "#ffffff";
-//current tag and current window font color
+//currnent tag and current window font color
 static const char col_gray4[]       = "#eeeeee";
-//top bar second color (blue) and active window border color 
+//top bar second color(blue) and active window border
 static const char col_cyan[]        = "#005577";
-static const char col_pick[]        = "#35fc03";
+static const char col_pick[]        = "#5eeb34";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_pick  },
 };
+
+static const int statmonval = 0;
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -46,12 +48,13 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "[]=",      tile },                   /* first entry is default */
+	{ "><>",      NULL },                   /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 
-	{ "|M|",	centeredmaster },		/* Master in middle, slaves on sides */
-	{ ">M>",	centeredfloatingmaster },	/* Same but master floats */
+	{ "|M|",      centeredmaster },		/* Master in middle, slaves on sides */
+	{ ">M>",      centeredfloatingmaster },	/* Same but master floats */
+        { "[D]",      deck}                     /* Same as tile, but slave in stack mode */
 };
 
 /* key definitions */
@@ -80,9 +83,7 @@ static Key keys[] = {
 
 	{ MODKEY,                       XK_F3,     spawn,          SHCMD("amixer -q -D pulse sset Master 1%+") },
 	{ MODKEY,                       XK_F2,     spawn,	   SHCMD("amixer -q -D pulse sset Master 1%-")},
-	{ MODKEY,                       XK_F1,     spawn,	   SHCMD("pulsemixer --toggle-mute")},
-	{ MODKEY,                       XK_F4,     spawn,          SHCMD("pulsemixer --toggle-mute --id source-1")},
-	{ Mod4Mask,                     XK_l,      spawn,          SHCMD("systemctl suspend")},
+	{ MODKEY,                       XK_F1,     spawn,	   SHCMD("pulsemixer --toggle-mute --id source-3")},
 	
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -99,6 +100,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY|ShiftMask,             XK_u,      setlayout,      {.v = &layouts[4]} },
+        { MODKEY,                       XK_g,      setlayout,      {.v = &layouts[5]} },
 	{ MODKEY,                       XK_Tab,    setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_Tab,    togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
