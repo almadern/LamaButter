@@ -67,6 +67,7 @@ bindkey '^e' edit-command-line
 # Load aliases.
 alias vpn_start="sudo openconnect -b vpn.tass.ru "
 alias vpn_stop="sudo killall openconnect"
+alias ssh="TERM='xterm-256color' ssh"
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
