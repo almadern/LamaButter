@@ -73,7 +73,7 @@ static const struct arg args[] = {
 	{ cpu_perc,    "  %s%% |",  NULL},
 	{ disk_free,   "  %s |",    "/"},
 	{ keymap,      "  %s |",    NULL},
-        { run_command, "  %s%%",    "pulsemixer --get-volume --id sink-2 | awk '{print $2}'"},
+        { run_command, "  %s%%",    "pulsemixer --get-volume | awk '{print $2}'"},
 	{ run_command, "(%s) |",     "/home/almadern/.config/Desktop/Scripts/mute_mic.sh"},
 	{ run_command, "  %s |",    "sensors | awk '/^temp1:/{print $2}'",},
 	{ run_command, "  %s |",    "/home/almadern/.config/Desktop/Scripts/weather.sh"},
