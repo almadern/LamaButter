@@ -116,6 +116,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -5 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +5 } },
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+	{ ShiftMask|ControlMask,           XK_1,     spawn,	   SHCMD("xdotool mousemove 0 500")},
+	{ ShiftMask|ControlMask,           XK_2,     spawn,	   SHCMD("xdotool mousemove 2580 500")},
+	{ ShiftMask|ControlMask,           XK_3,     spawn,	   SHCMD("xdotool mousemove 4580 500")},
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
