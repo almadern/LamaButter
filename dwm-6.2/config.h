@@ -11,7 +11,7 @@ static const int gappx              = 5;        /* gaps between windows */
 static const int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10", "DejaVu-Sans-Mono:size=14" };
+static const char *fonts[]          = { "monospace:size=10", "DejaVu-Sans-Mono:size=14", "Nerd Font:size=14", "Font Awesome:size=14", "JetBrainsMono Nerd Font:pixelsize=13:antialias=true:autohint=true" };
 static const char dmenufont[]       = "monospace:size=10";
 //background color
 static const char col_gray1[]       = "#000000";
