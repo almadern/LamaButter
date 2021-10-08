@@ -58,7 +58,9 @@ static const Layout layouts[] = {
 
 	{ "|M|",      centeredmaster },		/* Master in middle, slaves on sides */
 	{ ">M>",      centeredfloatingmaster },	/* Same but master floats */
-        { "[D]",      deck}                     /* Same as tile, but slave in stack mode */
+        { "[D]",      deck},                    /* Same as tile, but slave in stack mode */
+        { "TTT",      bstack },
+        { "===",      bstackhoriz },
 };
 
 /* key definitions */
@@ -105,6 +107,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY|ShiftMask,             XK_u,      setlayout,      {.v = &layouts[4]} },
         { MODKEY,                       XK_g,      setlayout,      {.v = &layouts[5]} },
+        { MODKEY,                       XK_h,      setlayout,      {.v = &layouts[6]} },
+        { MODKEY|ShiftMask,             XK_h,      setlayout,      {.v = &layouts[7]} },
 	{ MODKEY,                       XK_Tab,    setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_Tab,    togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
