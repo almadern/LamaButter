@@ -11,7 +11,7 @@ static const int gappx              = 5;        /* gaps between windows */
 static const int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10", "DejaVu-Sans-Mono:size=14", "Nerd Font:size=14", "Font Awesome:size=14", "JetBrainsMono Nerd Font:pixelsize=13:antialias=true:autohint=true" };
+static const char *fonts[]          = { "monospace:size=10", "DejaVu-Sans-Mono:size=14", "Nerd Font:size=14", "Font Awesome:size=14", "JetBrainsMono Nerd Font:pixelsize=14:antialias=true:autohint=true" };
 static const char dmenufont[]       = "monospace:size=10";
 //background color
 static const char col_gray1[]       = "#000000";
@@ -89,7 +89,7 @@ static Key keys[] = {
 
 	{ MODKEY,                       XK_F3,     spawn,          SHCMD("amixer -q -D pulse sset Master 1%+") },
 	{ MODKEY,                       XK_F2,     spawn,	   SHCMD("amixer -q -D pulse sset Master 1%-")},
-	{ MODKEY,                       XK_F1,     spawn,	   SHCMD("pulsemixer --toggle-mute --id source-3")},
+	{ MODKEY,                       XK_F1,     spawn,	   SHCMD("pulsemixer --toggle-mute --id source-2")},
 	
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -107,8 +107,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY|ShiftMask,             XK_u,      setlayout,      {.v = &layouts[4]} },
         { MODKEY,                       XK_g,      setlayout,      {.v = &layouts[5]} },
-        { MODKEY,                       XK_h,      setlayout,      {.v = &layouts[6]} },
-        { MODKEY|ShiftMask,             XK_h,      setlayout,      {.v = &layouts[7]} },
+        { MODKEY,                       XK_v,      setlayout,      {.v = &layouts[6]} },
+        { MODKEY|ShiftMask,             XK_v,      setlayout,      {.v = &layouts[7]} },
 	{ MODKEY,                       XK_Tab,    setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_Tab,    togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
