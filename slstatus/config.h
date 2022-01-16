@@ -76,6 +76,6 @@ static const struct arg args[] = {
         { run_command, " 墳 %s%%",    "pulsemixer --get-volume | awk '{print $2}'"},
 	{ run_command, "(%s) |",     "/home/almadern/.config/Desktop/Scripts/mute_mic.sh"},
 	{ run_command, "  %s |",    "sensors | awk '/^temp1:/{print $2}'",},
-	{ run_command, "  %s |",    "/home/almadern/.config/Desktop/Scripts/weather.sh"},
+	{ run_command, "   %s |",    "/home/almadern/.config/Desktop/Scripts/weather.sh"},
 	{ datetime,    "  %s ]",    "%a %F %T" },
 };
