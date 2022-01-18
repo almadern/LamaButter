@@ -89,7 +89,7 @@ static Key keys[] = {
 
 	{ MODKEY,                       XK_F3,     spawn,          SHCMD("amixer -q -D pulse sset Master 1%+") },
 	{ MODKEY,                       XK_F2,     spawn,	   SHCMD("amixer -q -D pulse sset Master 1%-")},
-	{ MODKEY,                       XK_F1,     spawn,	   SHCMD("pulsemixer --toggle-mute --id source-2")},
+	{ MODKEY,                       XK_F1,     spawn,	   SHCMD("/home/almadern/.config/Desktop/Scripts/mute.sh")},
 	
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },

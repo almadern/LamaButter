@@ -1,9 +1,9 @@
 #!/bin/bash
-mic=$(pulsemixer --list-sources | grep source-3 | awk '{print $13}')
+mic=$(pulsemixer --list-sources | grep 'Name: Focusrite Scarlett 2i2 2nd Gen Analog Stereo' | awk '{print $13}')
 
-if [[ $mic == "0," ]] 
+if [ $mic == "0," ]
 then 
-	echo ""
+	echo ""
 else 
-	echo ""
+	echo ""
 fi
